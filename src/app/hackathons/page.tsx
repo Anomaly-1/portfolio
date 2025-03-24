@@ -6,10 +6,12 @@ import { GridBackground } from '@/components/GridBackground';
 import { FloatingDock } from "@/components/FloatingDock";
 import links from "@/data/links";
 import Image from 'next/image';
+import { CloseIcon } from "@/components/CloseIcon";
+
 
 export default function Page() {
   const [active, setActive] = useState<(typeof hackathons)[number] | boolean | null>(null);
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const id = useId();
 
   useEffect(() => {
@@ -152,30 +154,6 @@ export default function Page() {
     </div>
   );
 }
-
-export const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.05 } }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-black"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
 
 const hackathons = [
   {
