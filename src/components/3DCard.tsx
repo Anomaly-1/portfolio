@@ -95,20 +95,9 @@ export const CardBody = ({
   );
 };
 
-export const CardItem = ({
-  as: Tag = "div",
-  children,
-  className,
-  translateX = 0,
-  translateY = 0,
-  translateZ = 0,
-  rotateX = 0,
-  rotateY = 0,
-  rotateZ = 0,
-  ...rest
-}: {
-  as?: React.ElementType;
-  children: React.ReactNode;
+interface CardItemProps<T extends React.ElementType> {
+  as?: T;
+  children?: React.ReactNode;
   className?: string;
   translateX?: number | string;
   translateY?: number | string;
@@ -117,33 +106,55 @@ export const CardItem = ({
   rotateY?: number | string;
   rotateZ?: number | string;
   [key: string]: any;
-} & { children?: React.ReactNode }) => {
-  const ref = useRef<HTMLElement>(null);
-  const [isMouseEntered] = useMouseEnter();
+}
 
-  useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered]);
+export const CardItem = React.forwardRef(
+  <T extends React.ElementType = "div">(
+    {
+      as,
+      children,
+      className,
+      translateX = 0,
+      translateY = 0,
+      translateZ = 0,
+      rotateX = 0,
+      rotateY = 0,
+      rotateZ = 0,
+      ...rest
+    }: CardItemProps<T>,
+    ref: React.Ref<HTMLDivElement>
+  ) => {
+    const localRef = useRef<HTMLDivElement>(null);
+    const [isMouseEntered] = useMouseEnter();
+    const Tag = as || 'div';
 
-  const handleAnimations = () => {
-    if (!ref.current) return;
-    if (isMouseEntered) {
-      ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
-    } else {
-      ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
-    }
-  };
+    useEffect(() => {
+      handleAnimations();
+    }, [isMouseEntered]);
 
-  return (
-    <Tag
-      ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...rest}
-    >
-      {children}
-    </Tag>
-  );
-};
+    const handleAnimations = () => {
+      const element = localRef.current;
+      if (!element) return;
+      if (isMouseEntered) {
+        element.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+      } else {
+        element.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+      }
+    };
+
+    return (
+      <Tag
+        ref={ref || localRef}
+        className={cn("w-fit transition duration-200 ease-linear", className)}
+        {...rest}
+      >
+        {children}
+      </Tag>
+    );
+  }
+);
+
+CardItem.displayName = "CardItem";
 
 // Create a hook to use the context
 export const useMouseEnter = () => {
