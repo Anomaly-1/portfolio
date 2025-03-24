@@ -51,7 +51,7 @@ const projects = [
     {
         title: "AgrIQ",
         description: "Coming Soon! (Polishing UI) - An app to allow farmers to detect and treat plant diseases.",
-        image: "/leaves.jfif",
+        image: "/leaves.jpg",
         tryLink: "/#",
         tag: "AI",
     },

@@ -9,7 +9,7 @@ import projects from "@/data/projects";
 
 export default function Page() {
   return (
-    <div className="mt-120 flex flex-col items-center justify-center pt-32 pb-20">
+    <div className="mt-120 sm:mt-160 flex flex-col items-center justify-center pt-32 pb-20">
       <GridBackground>
         <div className="relative top-0 z-50 bg-white dark:bg-black w-full py-8">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center tracking-tight text-black dark:text-white">
