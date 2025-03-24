@@ -1,10 +1,11 @@
 import {
     IconBrandGithub,
-    IconBrandX,
     IconExchange,
     IconHome,
-    IconNewSection,
+    IconAssembly,
     IconTerminal2,
+    IconReceipt,
+    IconMail,
   } from "@tabler/icons-react";
 
 import Image from "next/image";
@@ -15,51 +16,43 @@ const links = [
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
  
     {
-      title: "Products",
+      title: "Projects",
+      icon: (
+        <IconAssembly className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/projects",
+    },
+    {
+      title: "Hackathons",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/hackathons",
     },
     {
-      title: "Components",
+      title: "Resume",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconReceipt className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/resume",
     },
     {
-      title: "Aceternity UI",
+      title: "Contact",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
- 
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "/contact",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/Anomaly-1",
     },
   ];
 
