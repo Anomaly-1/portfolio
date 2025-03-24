@@ -8,6 +8,7 @@ import React, {
   useContext,
   useRef,
   useEffect,
+  forwardRef
 } from "react";
 
 const MouseEnterContext = createContext<
@@ -95,9 +96,9 @@ export const CardBody = ({
   );
 };
 
-interface CardItemProps<T extends React.ElementType> {
+type CardItemProps<T extends React.ElementType> = {
   as?: T;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
   translateX?: number | string;
   translateY?: number | string;
@@ -105,13 +106,12 @@ interface CardItemProps<T extends React.ElementType> {
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-  [key: string]: any;
-}
+} & React.ComponentPropsWithoutRef<T>; // Merge with the props of the element/component
 
-export const CardItem = React.forwardRef(
-  <T extends React.ElementType = "div">(
+export const CardItem = forwardRef<HTMLElement, CardItemProps<React.ElementType>>(
+  (
     {
-      as,
+      as: Tag = "div", // Default to 'div' if `as` is not provided
       children,
       className,
       translateX = 0,
@@ -121,19 +121,18 @@ export const CardItem = React.forwardRef(
       rotateY = 0,
       rotateZ = 0,
       ...rest
-    }: CardItemProps<T>,
-    ref: React.Ref<HTMLDivElement>
+    },
+    ref
   ) => {
-    const localRef = useRef<HTMLDivElement>(null);
+    const localRef = useRef<HTMLElement>(null);
     const [isMouseEntered] = useMouseEnter();
-    const Tag = as || 'div';
 
     useEffect(() => {
       handleAnimations();
     }, [isMouseEntered]);
 
     const handleAnimations = () => {
-      const element = localRef.current;
+      const element = ref ? (ref as React.RefObject<HTMLElement>).current : localRef.current;
       if (!element) return;
       if (isMouseEntered) {
         element.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
