@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import links from "@/data/links";
 import { FloatingDock } from "@/components/FloatingDock";
 
-export default function ContactPage() {
+export default function Page() {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [isReadyToSend, setIsReadyToSend] = useState(false);

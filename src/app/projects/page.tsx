@@ -7,7 +7,7 @@ import { FloatingDock } from "@/components/FloatingDock";
 import links from "@/data/links";
 import projects from "@/data/projects";
 
-export function Projects() {
+export default function Page() {
   return (
     <div className="mt-120 flex flex-col items-center justify-center pt-32 pb-20">
       <GridBackground>
@@ -72,5 +72,3 @@ export function Projects() {
     </div>
   );
 }
-
-export default Projects;

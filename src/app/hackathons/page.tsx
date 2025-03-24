@@ -7,7 +7,7 @@ import { FloatingDock } from "@/components/FloatingDock";
 import links from "@/data/links";
 import Image from 'next/image';
 
-export function Hackathons() {
+export default function Page() {
   const [active, setActive] = useState<(typeof hackathons)[number] | boolean | null>(null);
   const ref = useRef<HTMLElement | null>(null);
   const id = useId();
@@ -251,5 +251,3 @@ const hackathons = [
     },
   },
 ];
-
-export default Hackathons;
