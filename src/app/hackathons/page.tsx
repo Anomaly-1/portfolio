@@ -31,7 +31,7 @@ export default function Page() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
 
-  useOutsideClick(ref, () => setActive(null));
+  useOutsideClick(ref as React.RefObject<HTMLElement>, () => setActive(null));
 
   return (
     <div className="h-auto min-h-screen flex flex-col items-center justify-center pt-32 pb-20">
