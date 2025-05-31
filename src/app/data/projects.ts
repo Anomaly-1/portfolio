@@ -35,7 +35,7 @@ export const projects = [
     title: "FaceMask",
     description: "A small mask renderer that can recognize face positions and adjust accordingly.",
     image: "/images/facemask.png",
-    link: "https://github.com/Anomaly-1/facemask",
+    link: "https://github.com/Anomaly-1/face-mask",
     buttonText: "Check it out →",
     category: "AI",
   },

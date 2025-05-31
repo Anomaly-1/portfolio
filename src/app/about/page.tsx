@@ -20,13 +20,11 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-center text-white mb-12">
             About Me
           </h1>
-
           <div className="mt-8 font-normal text-base md:text-lg text-neutral-300 max-w-3xl text-center mx-auto space-y-6">
             <p>
-              I'm a driven software developer striving to continue building efficient and user-friendly applications. My interests span primarily full-stack development and AI. I enjoy tackling complex problems and continuously learning new technologies to enhance my skill set.
+              I&apos;m a driven software developer striving to continue building efficient and user-friendly applications. My interests span primarily full-stack development and AI. I enjoy tackling complex problems and continuously learning new technologies to enhance my skill set.
             </p>
           </div>
-
           <div className="mt-14 mb-64">
             <TechStack />
           </div>

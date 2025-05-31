@@ -44,15 +44,20 @@ export default function ProjectsPage() {
                     />
                   </CardItem>
                   <div className="flex justify-between items-center mt-10">
-                    <CardItem
-                      translateZ={20}
-                      as="a"
+                    <a
                       href={project.link}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 rounded-xl text-xs font-normal text-white border border-white hover:text-blue-400 hover:border-blue-400 transition-all"
                     >
-                      {project.buttonText}
-                    </CardItem>
+                      <CardItem
+                        translateZ={20}
+                        as="span"
+                        className=""
+                      >
+                        {project.buttonText}
+                      </CardItem>
+                    </a>
                     <CardItem
                       translateZ={20}
                       as="button"
