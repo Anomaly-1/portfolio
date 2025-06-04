@@ -58,13 +58,13 @@ export default function ProjectsPage() {
                         {project.buttonText}
                       </CardItem>
                     </a>
-                    <CardItem
+                    {/* <CardItem
                       translateZ={20}
                       as="button"
                       className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold hover:bg-blue-400 hover:text-white transition-all"
                     >
-                      Sign up
-                    </CardItem>
+                      Sign up 
+                    </CardItem> */}
                   </div>
                 </CardBody>
               </CardContainer>
