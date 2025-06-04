@@ -11,7 +11,7 @@ export const projects = [
     title: "Tetris AI",
     description: "An AI built to play Tetris (Achieves ridiculous scores, nearly infinite).",
     image: "/images/tetrisai.png",
-    link: "https://github.com/Anomaly-1/tetris-ai",
+    link: "https://github.com/Anomaly-1/tetrisAI",
     buttonText: "Check it out →",
     category: "AI",
   },
