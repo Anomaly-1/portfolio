@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
-import { GridSmallBackground } from '@/components/smallbackground';
 import HomeIconButton from '@/components/HomeIconButton';
-import { TechStack } from '@/components/TechStack';
-import { CustomCursor } from '@/components/custom-cursor';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { DotBackground } from '@/components/dotbackground';
 
