@@ -18,6 +18,16 @@
   }
 }
 
+.group .pointer-events-none {
+  transition: opacity 0.2s ease-in-out;
+}
+.group:hover .pointer-events-none {
+  opacity: 1;
+}
+.pointer-events-none {
+  opacity: 0;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
