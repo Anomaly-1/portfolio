@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { User, Folder, FileText, Search } from 'lucide-react';
+import { User, Folder, FileText } from 'lucide-react';
 import { DotBackground } from '@/components/dotbackground';
 
 export default function Home() {
