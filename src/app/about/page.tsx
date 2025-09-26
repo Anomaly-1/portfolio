@@ -24,7 +24,7 @@ export default function AboutPage() {
           {/* Social Links */}
           <div className="flex justify-center gap-8 mb-20">
             <a 
-              href="https://github.com" 
+              href="https://github.com/Anomaly-1" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-colors duration-300"
@@ -33,7 +33,7 @@ export default function AboutPage() {
               <span className="text-sm font-light">GitHub</span>
               <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
-            <a 
+            {/* <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -42,9 +42,9 @@ export default function AboutPage() {
               <Linkedin className="w-5 h-5" />
               <span className="text-sm font-light">LinkedIn</span>
               <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </a>
+            </a> */}
             <a 
-              href="mailto:your.email@example.com" 
+              href="mailto:cognitivetech52@gmail.com" 
               className="group flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-colors duration-300"
             >
               <Mail className="w-5 h-5" />

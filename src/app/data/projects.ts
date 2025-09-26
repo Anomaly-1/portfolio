@@ -8,14 +8,6 @@ export const projects = [
     categories: ["Web App", "Real-time", "Next.js"],
   },
   {
-    title: "Platemaster",
-    description: "Smart recipe generator that creates personalized meal plans and helps you discover new flavors.",
-    icon: "/bowl.svg",
-    link: "https://github.com/Anomaly-1/platemaster",
-    buttonText: "View Project →",
-    categories: ["Food", "Web App", "React"],
-  },
-  {
     title: "Tetris AI",
     description: "AI that masters Tetris with superhuman precision, achieving nearly infinite scores through machine learning.",
     icon: "/tetris.svg",
@@ -27,9 +19,17 @@ export const projects = [
     title: "The Harvest",
     description: "Elegant restaurant website showcasing culinary artistry with stunning visuals and smooth interactions.",
     icon: "/menu.svg",
-    link: "https://webmaster-tau.vercel.app",
+    link: "https://the-harvest-restaurant.vercel.app/",
     buttonText: "View Project →",
     categories: ["Food", "Web Design", "UI/UX"],
+  },
+  {
+    title: "Platemaster",
+    description: "Smart recipe generator that creates personalized meal plans and helps you discover new flavors.",
+    icon: "/bowl.svg",
+    link: "https://github.com/Anomaly-1/platemaster",
+    buttonText: "View Project →",
+    categories: ["Food", "Web App", "React"],
   },
   {
     title: "FlowPro",
