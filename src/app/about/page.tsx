@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import HomeIconButton from '@/components/HomeIconButton';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Github, Mail, ExternalLink } from 'lucide-react';
 import { DotBackground } from '@/components/dotbackground';
 
 export default function AboutPage() {
