@@ -3,36 +3,28 @@ export interface ResearchItem {
   description: string;
   links: { label: string; url: string }[];
   embedUrl?: string;
+  status?: 'completed' | 'wip';
 }
 
 export const research: ResearchItem[] = [
   {
-    title: "Efficient Neural Network Pruning",
-    description: "A study on reducing neural network size while maintaining accuracy. Includes code and Colab notebook.",
+    title: "Viability of Spiking Neural Networks (SNNs) in Dynamic Environments",
+    description: "Work in Progress: Investigating whether Spiking Neural Networks can match the accuracy of conventional Deep Q-Networks (DQNs) in dynamic, time-varying environments. Exploring neuromorphic computing approaches for reinforcement learning tasks.",
     links: [
-      { label: "Paper PDF", url: "/resume.pdf" },
-      { label: "Colab Notebook", url: "https://colab.research.google.com/" },
-      { label: "GitHub", url: "https://github.com/" }
+      { label: "GitHub Repository", url: "https://github.com/Anomaly-1/snn-dqn-viability" },
+      { label: "Initial Findings", url: "/snn-dqn-paper.pdf" }
     ],
-    embedUrl: "/resume.pdf"
+    embedUrl: undefined,
+    status: 'wip'
   },
   {
-    title: "Graph-based Pathfinding Algorithms",
-    description: "Exploring A* and Dijkstra's algorithms for real-world navigation problems. Includes interactive demo.",
+    title: "Quantum-Classical Hybrid Model for Fraud Detection",
+    description: "Work in Progress: Evaluating the performance of a quantum-classical hybrid model against traditional classical benchmarks for fraud detection in financial transactions. Combining quantum algorithms with classical machine learning for enhanced anomaly detection.",
     links: [
-      { label: "Paper PDF", url: "/resume.pdf" },
-      { label: "Demo", url: "https://pathfinding-visualizer.com/" }
+      { label: "GitHub Repository", url: "https://github.com/Anomaly-1/quantum-fraud-detection" },
+      { label: "Preliminary Results", url: "/quantum-fraud-paper.pdf" }
     ],
-    embedUrl: undefined
-  },
-  {
-    title: "Transfer Learning for Image Classification",
-    description: "How transfer learning boosts accuracy on small datasets. Includes Jupyter notebook and code.",
-    links: [
-      { label: "Paper PDF", url: "/resume.pdf" },
-      { label: "Jupyter Notebook", url: "https://nbviewer.org/" },
-      { label: "GitHub", url: "https://github.com/" }
-    ],
-    embedUrl: undefined
+    embedUrl: undefined,
+    status: 'wip'
   }
 ];

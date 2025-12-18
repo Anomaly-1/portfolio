@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { User, Folder, FileText } from 'lucide-react';
+import { User, Folder, FileText, Search} from 'lucide-react';
 import { DotBackground } from '@/components/dotbackground';
 
 export default function Home() {
@@ -13,13 +13,8 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-8 md:gap-12">
           <IconLink href="/about" icon={<User className="w-7 h-7" />} label="About" />
           <IconLink href="/projects" icon={<Folder className="w-7 h-7" />} label="Projects" />
-          {/* <IconLink href="/research" icon={<Search className="w-7 h-7" />} label="Research" /> */}
-          {/* Resume — triggers download */}
-          <DownloadLink
-            href="/resume.pdf"
-            icon={<FileText className="w-7 h-7" />}
-            label="Resume"
-          />
+          <IconLink href="/research" icon={<Search className="w-7 h-7" />} label="Research" />
+          <IconLink href="/resume" icon={<FileText className="w-7 h-7" />} label="Resume" />
         </div>
       </main>
     </DotBackground>

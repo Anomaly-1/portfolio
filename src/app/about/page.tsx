@@ -55,8 +55,8 @@ export default function AboutPage() {
           {/* Tech Stack */}
           <div className="mb-16">
             <h2 className="text-2xl font-light text-white mb-8 text-center drop-shadow-md">Technologies</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <div className="text-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Frontend</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">React</div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
                   <div className="text-white font-light">Next.js</div>
                 </div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Backend</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">Python</div>
@@ -72,15 +72,31 @@ export default function AboutPage() {
                   <div className="text-white font-light">PostgreSQL</div>
                 </div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+                <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Mobile</h3>
+                <div className="space-y-2">
+                  <div className="text-white font-light">Expo</div>
+                  <div className="text-white font-light">React Native</div>
+                  <div className="text-white font-light">Swift</div>
+                </div>
+              </div>
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">AI/ML</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">TensorFlow</div>
                   <div className="text-white font-light">PyTorch</div>
-                  <div className="text-white font-light">OpenAI</div>
+                  <div className="text-white font-light">Scikit-learn</div>
                 </div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+                <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">IoT</h3>
+                <div className="space-y-2">
+                  <div className="text-white font-light">C++</div>
+                  <div className="text-white font-light">Arduino</div>
+                  <div className="text-white font-light">Raspberry Pi</div>
+                </div>
+              </div>
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Tools</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">Git</div>
