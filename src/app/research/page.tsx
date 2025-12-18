@@ -8,21 +8,18 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function ResearchPage() {
   const [selected, setSelected] = useState(0);
-  const [direction, setDirection] = useState(0);
   const item = research[selected];
   const canGoPrev = selected > 0;
   const canGoNext = selected < research.length - 1;
 
   const handlePrev = () => {
     if (canGoPrev) {
-      setDirection(-1);
       setSelected(selected - 1);
     }
   };
 
   const handleNext = () => {
     if (canGoNext) {
-      setDirection(1);
       setSelected(selected + 1);
     }
   };
@@ -135,10 +132,7 @@ export default function ResearchPage() {
               {research.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    setDirection(index > selected ? 1 : -1);
-                    setSelected(index);
-                  }}
+                  onClick={() => setSelected(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === selected
                       ? "bg-yellow-400"
