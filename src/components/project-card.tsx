@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ProjectCardProps {
   title: string;
@@ -13,6 +13,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, icon, link, buttonText, categories = [], image, normalImage }: ProjectCardProps) {
+  const [loaded, setLoaded] = useState(false);
   const isHardware = categories.includes('Hardware');
   return (
     <div className="group relative bg-black border border-neutral-600 p-6 hover:scale-105 transition-all duration-300 hover:border-yellow-400/50">
@@ -51,16 +52,20 @@ export function ProjectCard({ title, description, icon, link, buttonText, catego
         <div className="mb-6 flex items-center justify-center h-64 bg-neutral-900 rounded-lg group-hover:bg-neutral-800 transition-colors duration-300 relative overflow-hidden">
           {image ? (
             <>
+              {!loaded && (
+                <div className="absolute inset-0 bg-neutral-700 animate-pulse rounded-lg"></div>
+              )}
               <img
                 src={image}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0"
+                className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0 ${loaded ? '' : 'opacity-0'}`}
+                onLoad={() => setLoaded(true)}
               />
               {normalImage && (
                 <img
                   src={normalImage}
                   alt={title}
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
+                  className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 ${loaded ? '' : 'opacity-0'}`}
                 />
               )}
             </>
