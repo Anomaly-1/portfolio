@@ -71,8 +71,8 @@ export default function ProjectsPage() {
                   link={project.link}
                   buttonText={project.buttonText}
                   categories={project.categories || []}
-                  image={project.image}
                   normalImage={project.normalImage}
+                  slug={project.slug}
                 />
               ))}
           </div>
