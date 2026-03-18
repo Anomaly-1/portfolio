@@ -6,16 +6,20 @@ import { DitherShader } from './dither-shader';
 interface ProjectCardProps {
   title: string;
   description: string;
-  icon?: string;
-  link?: string | null;
+  links?: ProjectLink[] | null;
   buttonText: string;
   categories?: string[];
-  image?: string;
   normalImage?: string;
   slug?: string;
 }
 
-export function ProjectCard({ title, description, icon, link, buttonText, categories = [], image, normalImage, slug }: ProjectCardProps) {
+interface ProjectLink {
+  link: string;
+  linkMessage: string;
+  label?: string; // Optional: custom terminal window name
+}
+
+export function ProjectCard({ title, description, buttonText, categories = [], normalImage, slug }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const isHardware = categories.includes('Hardware');
   const isSoftware = !isHardware;

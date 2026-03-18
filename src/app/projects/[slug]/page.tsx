@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { projects, type Project } from '@/app/data/projects';
+import { projects } from '@/app/data/projects';
 import HomeIconButton from '@/components/HomeIconButton';
 import { DotBackground } from '@/components/dotbackground';
 import { DitherShader } from '@/components/dither-shader';
@@ -23,7 +23,7 @@ export default function ProjectDetailPage() {
     setMounted(true);
   }, []);
 
-  const handleImageMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleImageMouseMove = () => {
     // Not needed for simple fade, but kept for potential future use
   };
 
@@ -50,8 +50,6 @@ export default function ProjectDetailPage() {
       </DotBackground>
     );
   }
-
-  const isHardware = project.categories?.includes('Hardware');
 
   return (
     <DotBackground>

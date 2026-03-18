@@ -67,8 +67,6 @@ export default function ProjectsPage() {
                   key={index}
                   title={project.title}
                   description={project.description}
-                  icon={project.icon}
-                  link={project.link}
                   buttonText={project.buttonText}
                   categories={project.categories || []}
                   normalImage={project.normalImage}
