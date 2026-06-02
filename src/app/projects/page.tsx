@@ -62,15 +62,21 @@ export default function ProjectsPage() {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project, index) => (
+            {[...filteredProjects]
+              .sort((a, b) => {
+                if (a.priority !== b.priority) return a.priority - b.priority;
+                return a.title.localeCompare(b.title);
+              })
+              .map((project) => (
                 <ProjectCard
-                  key={index}
+                  key={project.slug}
                   title={project.title}
                   description={project.description}
                   buttonText={project.buttonText}
                   categories={project.categories || []}
                   normalImage={project.normalImage}
                   slug={project.slug}
+                  priority={project.priority} // ← Critical addition
                 />
               ))}
           </div>

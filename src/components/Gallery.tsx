@@ -252,8 +252,7 @@ export default function Gallery({ images, projectTitle, mounted = true, onViewer
           ))}
         </div>
       </div>
-
-      {/* Popup Viewer */}
+            {/* Popup Viewer */}
       {selectedImage && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
@@ -312,12 +311,17 @@ export default function Gallery({ images, projectTitle, mounted = true, onViewer
           </button>
 
           {/* Image Container */}
-          <div className="relative max-w-7xl max-h-[85vh] p-4 md:p-8" onClick={(e) => e.stopPropagation()}>
+          <div 
+            className="relative w-fit h-fit p-4 md:p-8" 
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Decorative Borders */}
             <div className="absolute inset-0 border border-yellow-400/30 rounded-lg pointer-events-none" />
             <div className="absolute -inset-1 border border-yellow-400/10 rounded-lg pointer-events-none" />
 
+            {/* Loading State */}
             {popupStatus === 'loading' && (
-              <div className="w-full h-full min-h-[300px] md:min-h-[500px] flex flex-col items-center justify-center gap-4">
+              <div className="w-[min(85vw,48rem)] min-h-[300px] md:min-h-[400px] flex flex-col items-center justify-center gap-4">
                 <LoadingSpinner size="lg" />
                 <div className="text-yellow-400/60 font-mono text-sm animate-pulse">
                   LOADING_IMAGE_{String(selectedImage.index + 1).padStart(2, '0')}
@@ -325,8 +329,9 @@ export default function Gallery({ images, projectTitle, mounted = true, onViewer
               </div>
             )}
 
+            {/* Error State */}
             {popupStatus === 'error' && (
-              <div className="w-full h-full min-h-[300px] md:min-h-[500px] flex flex-col items-center justify-center">
+              <div className="w-[min(85vw,48rem)] min-h-[300px] md:min-h-[400px] flex flex-col items-center justify-center">
                 <ImageError 
                   onRetry={() => {
                     setPopupStatus('loading');
@@ -335,23 +340,28 @@ export default function Gallery({ images, projectTitle, mounted = true, onViewer
                     img.onload = () => setPopupStatus('loaded');
                     img.onerror = () => setPopupStatus('error');
                   }} 
-                  className="w-full max-w-2xl"
+                  className="w-full"
                 />
               </div>
             )}
 
+            {/* Loaded Image */}
             {popupStatus === 'loaded' && (
               <img
                 src={selectedImage.url}
                 alt={`${projectTitle} gallery ${selectedImage.index + 1}`}
-                className="w-full h-full object-contain rounded-lg shadow-2xl shadow-yellow-400/20"
-                style={{ animation: 'fadeInScale 0.5s cubic-bezier(0.16, 1, 0.3, 1) both' }}
+                className="max-w-[min(85vw,48rem)] max-h-[min(85vh,48rem)] object-contain rounded-lg shadow-2xl shadow-yellow-400/20"
+                style={{ 
+                  animation: 'fadeInScale 0.5s cubic-bezier(0.16, 1, 0.3, 1) both',
+                  width: 'auto',
+                  height: 'auto'
+                }}
                 draggable={false}
               />
             )}
 
             {/* Counter */}
-            <div className="absolute -bottom-8 left-0 text-yellow-400 font-mono text-sm">
+            <div className="absolute -bottom-8 left-0 text-yellow-400 font-mono text-sm whitespace-nowrap">
               <span className="opacity-60">IMAGE_</span>
               <span>{String(selectedImage.index + 1).padStart(2, '0')}</span>
               <span className="opacity-60"> / {String(images.length).padStart(2, '0')}</span>
