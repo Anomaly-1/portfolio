@@ -14,6 +14,12 @@ export interface Project {
   normalImage?: string;
   fitImage: boolean;
   priority: 1 | 2 | 3; // 1 = highest significance (novelty + utility)
+  completionDate: string; // Format: "Month Year" or "Year"
+  specialization: string; 
+  skills: string[]; 
+  projectType: 'passion' | 'competition' | 'education' | 'commission' | 'research';
+  leadership?: string; 
+  impact: string; 
 }
 
 interface ProjectLink {
@@ -48,7 +54,13 @@ export const projects: Project[] = [
     showGallery: true,
     galleryImages: ["/unbound/captions.png", "/unbound/OCR.png", "/unbound/readaloud.png", "/unbound/devices.png"],
     fitImage: true,
-    priority: 1
+    priority: 1,
+    completionDate: "2024",
+    specialization: "Accessibility & Computer Vision",
+    skills: ["iOS Development", "Swift", "Computer Vision", "Real-time Processing", "Audio Engineering"],
+    projectType: "passion",
+    leadership: "Led end-to-end development with a team of 3-5 developers, with deep focus on accessibility and inclusive design",
+    impact: "Demonstrated how modern technology can empower individuals with disabilities; created a comprehensive accessibility toolkit"
   },
   {
     slug: "linkerra",
@@ -70,7 +82,13 @@ export const projects: Project[] = [
     showGallery: true,
     galleryImages: ["/linkerra/othercover.png", "/linkerra/smartorganizer.png", "/linkerra/sync.png", "/linkerra/testconverter.png", "/linkerra/testedsmartorganizer.png", "/linkerra/testrecieve.png", "/linkerra/testsend.png", "/linkerra/testsync.png", "/linkerra/transfer.png", "/linkerra/converter.png"],
     fitImage: true,
-    priority: 2
+    priority: 2,
+    completionDate: "2024",
+    specialization: "Systems & Networking",
+    skills: ["Rust", "P2P Networking", "Tauri Desktop Development", "Full-stack Development"],
+    projectType: "passion",
+    leadership: "Architected core P2P protocol integration and system design",
+    impact: "Built a performant, cross-platform file transfer solution; deepened systems programming expertise; Learned how to use a hybrid Rust-based framework for front and backend development"
   },
   {
     slug: "echo",
@@ -93,7 +111,13 @@ export const projects: Project[] = [
     showGallery: true,
     galleryImages: ["/echo/brown.png","/echo/appearance.png","/echo/dark.png","/echo/orange.png","/echo/teal.png", "/echo/signin.png"],
     fitImage: true,
-    priority: 2
+    priority: 2,
+    completionDate: "2025",
+    specialization: "Real-time Web Communication",
+    skills: ["Real-time Database Integration", "Full-stack Web Development", "Authentication", "Responsive Design"],
+    projectType: "passion",
+    leadership: "Designed and implemented complete communication stack and orignally utilized it as an option for communication through school networks",
+    impact: "Learned real-time database patterns and communication architecture; created a minimal yet functional messaging platform; was able to support significant concurrent user support"
   },
   {
     slug: "tetris-ai",
@@ -115,7 +139,13 @@ export const projects: Project[] = [
     showGallery: false,
     galleryImages: [],
     fitImage: true,
-    priority: 1
+    priority: 1,
+    completionDate: "2025",
+    specialization: "Machine Learning & Game AI",
+    skills: ["Genetic Algorithms", "Neural Networks", "Reinforcement Learning Principles", "Game Development"],
+    projectType: "education",
+    leadership: "Researched and implemented evolutionary optimization techniques",
+    impact: "Gained deep understanding of genetic algorithms and AI optimization; created an agent capable of self-improvement"
   },
   {
     slug: "the-harvest",
@@ -136,7 +166,13 @@ export const projects: Project[] = [
     showGallery: true,
     galleryImages: ["/harvest/drinks.png","/harvest/mainmenu.png","/harvest/homepage.png","/harvest/bottommain.png", "/harvest/reservation.png"],
     fitImage: true,
-    priority: 3
+    priority: 3,
+    completionDate: "2024",
+    specialization: "UI/UX Design & Frontend",
+    skills: ["React", "Animation", "Responsive Design", "Component Architecture"],
+    projectType: "education",
+    leadership: "Designed and executed complete UI/UX vision",  
+    impact: "Mastered animation libraries and responsive design patterns; created a polished, modern website; Learned how to deploy and optimize applications for mobile views as well"
   },
   {
     slug: "pathfinding-visualizer",
@@ -158,7 +194,13 @@ export const projects: Project[] = [
     fitImage: true,
     showGallery: true,
     galleryImages: ["/pathfinder/Astar.png", "/pathfinder/BFS.png", "/pathfinder/DFS.png", "/pathfinder/Greedy.png", "/pathfinder/leftside.png", "/pathfinder/multidirectional.png", "/pathfinder/rightside.png", "/pathfinder/rightsidetwo.png", "/pathfinder/title.png"],
-    priority: 2
+    priority: 2,
+    completionDate: "2023",
+    specialization: "Algorithms & Visualization",
+    skills: ["Algorithm Implementation", "Data Structures", "Interactive Visualization", "Real-time Rendering"],
+    projectType: "education",
+    leadership: "Led algorithm research and interactive visualization implementation",
+    impact: "Deep dive into classic algorithms; created an effective educational tool for algorithm visualization"
   },
   {
     slug: "platemaster",
@@ -184,7 +226,13 @@ export const projects: Project[] = [
     showGallery: true,
     galleryImages: ["/platemaster/estimates.png","/platemaster/ingredients.png","/platemaster/nutrients.png"],
     fitImage: true,
-    priority: 1
+    priority: 1,
+    completionDate: "2023",
+    specialization: "AI & Computer Vision",
+    skills: ["Computer Vision", "LLM Integration", "Vue.js", "Full-stack Development", "Nutritional Data APIs"],
+    projectType: "passion",
+    leadership: "Architected entire system from computer vision to AI recipe generation working with another individual",
+    impact: "Created a convenient solution by integrating cutting-edge AI with practical meal planning; demonstrated full-stack AI application development; Learned how to integrate custom APIs"
   },
   {
     slug: "flowpro",
@@ -206,7 +254,13 @@ export const projects: Project[] = [
     showGallery: false,
     galleryImages: [],
     fitImage: true,
-    priority: 3
+    priority: 3,
+    completionDate: "2023",
+    specialization: "Finance & Data Visualization",
+    skills: ["Financial Data APIs", "Personal Finance Design", "Real-time Data Handling"],
+    projectType: "passion",
+    leadership: "Designed and implemented personal finance tracking system",
+    impact: "Built practical tool for personal finance management; learned financial data integration and visualization; Learned how to integrate custom APIs"
   },
   {
     slug: "facemask",
@@ -228,14 +282,20 @@ export const projects: Project[] = [
     showGallery: false,
     galleryImages: [],
     fitImage: true,
-    priority: 2
+    priority: 2,
+    completionDate: "2023",
+    specialization: "Computer Vision & AR",
+    skills: ["Real-time Computer Vision", "Facial Recognition", "OpenCV", "AR Concepts"],
+    projectType: "education",
+    leadership: "Implemented real-time facial tracking and rendering system",
+    impact: "Learned MediaPipe and real-time CV; created foundation for AR filter technology"
   },
   {
     slug: "housing-data-analysis",
     title: "Housing Data Analysis",
     description: "Analysis of real estate trends using Zillow data to reveal market patterns.",
     normalImage: "/datacover.png",
-    links: [{ link: "https://github.com/Anomaly-1/housing-data-analysis/blob/main/Documentation%20Porfolio%20-%20Data%20Science%20%26%20Analytics.docx", linkMessage: "View the full report file", label: "analysis repo" }],
+    links: [{ link: "https://github.com/Anomaly-1/housing-data-analysis", linkMessage: "View the full report file", label: "analysis repo" }],
     buttonText: "View Project →",
     categories: ["Finance", "Data Analysis", "Python", "Software"],
     fullDescription: "A statistical analysis of housing market trends using Zillow data. Explores geographic clustering, temporal price patterns, and basic predictive modeling through standard data science workflows.",
@@ -247,7 +307,13 @@ export const projects: Project[] = [
       "Data visualizations"
     ],
     fitImage: true,
-    priority: 3
+    priority: 3,
+    completionDate: "2024",
+    specialization: "Data Science & Analysis",
+    skills: ["Data Wrangling", "Statistical Analysis", "Data Visualization", "Predictive Modeling"],
+    projectType: "education",
+    leadership: "Conducted comprehensive market analysis and reporting",
+    impact: "Developed data science fundamentals; created insights from complex datasets"
   },
   {
     slug: "autonomous-movement-bot",
@@ -268,7 +334,13 @@ export const projects: Project[] = [
     showGallery: false,
     galleryImages: [],
     fitImage: false,
-    priority: 2
+    priority: 2,
+    completionDate: "2025",
+    specialization: "Robotics & Control Systems",
+    skills: ["PID Control", "IMU Integration", "Embedded Systems", "Motor Control"],
+    projectType: "passion",
+    leadership: "Designed and calibrated autonomous motion control system, taught multiple teams the fundamentals of electronics and how to build their own",
+    impact: "Mastered PID control loops and sensor integration; created precise autonomous movement"
   },
   {
     slug: "DNA-Drone",
@@ -290,9 +362,15 @@ export const projects: Project[] = [
       "First Person POV capabilities"
     ],
     fitImage: false,
-    priority: 1
+    priority: 1,
+    completionDate: "2025",
+    specialization: "Drone Engineering & Mechanical Design",
+    skills: ["Circuit Design", "CAD Modeling", "Embedded Systems", "Drone Electronics", "Mechanical Engineering"],
+    projectType: "passion",
+    leadership: "Led complete custom drone build from circuit design to flight with a team of 6 people",
+    impact: "Built a capable FPV drone; mastered electrical integration and mechanical design; created a custom payload system with responsive remote controls"
   },
-  {
+    {
     slug: "basket-bot",
     title: "VEX Basket Bot",
     description: "Specializes in hoarding balls",
@@ -314,7 +392,13 @@ export const projects: Project[] = [
       "Automatic color sort"
     ],
     fitImage: false,
-    priority: 2
+    priority: 2,
+    completionDate: "2025",
+    specialization: "Competitive Robotics",
+    skills: ["Embedded C++", "Technical Documentation", "Robot Strategy", "CAD Assistance", "Team Leadership"],
+    projectType: "competition",
+    leadership: "Technical lead for programming and documentation; provided minor CAD assistance and contributed to robot strategies (team of 5)",
+    impact: "Optimized autonomous and control performance through robust code; established comprehensive technical documentation for the team; went against over 80+ teams and won multiple awards with a ranking within the top quarter"
   },
   {
     slug: "s-bot",
@@ -338,7 +422,13 @@ export const projects: Project[] = [
       "Autonomous path routines"
     ],
     fitImage: false,
-    priority: 2
+    priority: 2,
+    completionDate: "2025",
+    specialization: "Competitive Robotics",
+    skills: ["Embedded C++", "Technical Documentation", "Robot Strategy", "CAD Assistance", "Software Architecture"],
+    projectType: "competition",
+    leadership: "Technical lead for programming and documentation; assisted with CAD design and formulated match strategies (team of 5)",
+    impact: "Enhanced robot reliability and efficiency through optimized code; streamlined team operations with detailed technical documentation; went against over 80+ teams and won multiple awards with a ranking within the top quarter"
   },
   {
     slug: "ramp-bot",
@@ -361,7 +451,13 @@ export const projects: Project[] = [
       "Autonomous path routines"
     ],
     fitImage: false,
-    priority: 2
+    priority: 2,
+    completionDate: "2025",
+    specialization: "Competitive Robotics",
+    skills: ["Embedded C++", "Technical Documentation", "Robot Strategy", "CAD Assistance", "Systems Integration"],
+    projectType: "competition",
+    leadership: "Led programming efforts and technical documentation; supported mechanical design via CAD and developed game strategies (team of 5)",
+    impact: "Delivered reliable autonomous routines and control systems; improved team efficiency through standardized documentation; went against over 80+ teams and won multiple awards with a ranking within the top quarter"
   },
   {
     slug: "flux",
@@ -387,6 +483,44 @@ export const projects: Project[] = [
     showGallery: false,
     galleryImages: [],
     fitImage: false,
-    priority: 1
+    priority: 1,
+    completionDate: "2026",
+    specialization: "Hardware Engineering & Embedded Systems",
+    skills: ["PCB Design", "Python Firmware", "Battery Management", "CAD Modeling", "Protocol Engineering", "Embedded Linux"],
+    projectType: "passion",
+    leadership: "Single-handedly designed and built complete device from concept to prototype",
+    impact: "Mastered hardware-software integration; created an innovative modular device platform; learned how to create independent power systems and manage heat in enclosed devices"
   },
+  {
+  slug: "core",
+  title: "Core",
+  description: "A mobile app for alerting users about local environmental issues like electricity waste, emissions, and water pollution.",
+  normalImage: "/core/cover.png",
+  links: [
+    { link: "https://github.com/Anomaly-1/core", linkMessage: "View Source Code", label: "github repo" },
+    { link: "https://devpost.com/software/core-zaxedb", linkMessage: "View Award Submission", label: "devpost" }
+  ],
+  buttonText: "More Info →",
+  categories: ["Software", "Mobile App"],
+  showGallery: false,
+  galleryImages: [],
+  fullDescription: "Core is a mobile application built using Expo and React Native that aims to help users reduce their environmental impact. It alerts users to local issues such as electricity waste, emissions, lack of greenery, and water pollution. The app features a self-quizzing system that rates users on their sustainability efforts and provides educational resources on how to adopt eco-friendly practices like conserving energy, using sustainable transportation, and supporting reforestation. Developed rapidly with preserved quality, the app serves as a practical tool for community improvement and environmental awareness.",
+  technologies: ["Expo", "React Native", "TypeScript", "JavaScript", "CSS"],
+  features: [
+    "Alerts for local environmental issues (electricity, emissions, water)",
+    "Sustainability quiz and personalized rating system",
+    "Educational resources for eco-friendly practices",
+    "Tools for tracking electricity waste and tree planting initiatives",
+    "Cross-platform support (iOS, Android, Web) via Expo",
+    "Production-ready mobile architecture"
+  ],
+  fitImage: false,
+  priority: 3,
+  completionDate: "2024",
+  specialization: "Mobile Development",
+  skills: ["React Native", "Expo", "TypeScript", "Mobile App Development", "Rapid Prototyping"],
+  projectType: "competition",
+  leadership: "Developed a production-ready mobile application from concept to deployment in a rapid hackathon environment",
+  impact: "Won the hackathon (KuriusHacks: March Edition) while delivering a high-quality, cross-platform sustainability app"
+  }
 ];

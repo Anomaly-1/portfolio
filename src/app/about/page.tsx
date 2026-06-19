@@ -17,7 +17,7 @@ export default function AboutPage() {
               Arjun Hariharan
             </h1>
             <p className="text-xl md:text-2xl text-neutral-200 font-light max-w-2xl mx-auto leading-relaxed">
-              Software developer passionate about building efficient applications and exploring AI.
+              Technology developer passionate about building efficient solutions through the integration of smart software and innovative hardware.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
               href="https://github.com/Anomaly-1" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-colors duration-300"
+              className="group flex items-center gap-2 text-neutral-300 hover:text-amber transition-colors duration-300"
             >
               <Github className="w-5 h-5" />
               <span className="text-sm font-light">GitHub</span>
@@ -37,7 +37,7 @@ export default function AboutPage() {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-colors duration-300"
+              className="group flex items-center gap-2 text-neutral-300 hover:text-amber transition-colors duration-300"
             >
               <Linkedin className="w-5 h-5" />
               <span className="text-sm font-light">LinkedIn</span>
@@ -45,7 +45,7 @@ export default function AboutPage() {
             </a> */}
             <a 
               href="mailto:cognitivetech52@gmail.com" 
-              className="group flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-colors duration-300"
+              className="group flex items-center gap-2 text-neutral-300 hover:text-amber transition-colors duration-300"
             >
               <Mail className="w-5 h-5" />
               <span className="text-sm font-light">Email</span>
@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="mb-16">
             <h2 className="text-2xl font-light text-white mb-8 text-center drop-shadow-md">Technologies</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-amber/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Frontend</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">React</div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
                   <div className="text-white font-light">Next.js</div>
                 </div>
               </div>
-              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-amber/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Backend</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">Python</div>
@@ -72,7 +72,7 @@ export default function AboutPage() {
                   <div className="text-white font-light">PostgreSQL</div>
                 </div>
               </div>
-              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-amber/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Mobile</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">Expo</div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                   <div className="text-white font-light">Swift</div>
                 </div>
               </div>
-              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-amber/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">AI/ML</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">TensorFlow</div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                   <div className="text-white font-light">Scikit-learn</div>
                 </div>
               </div>
-              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-amber/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">IoT</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">C++</div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                   <div className="text-white font-light">Raspberry Pi</div>
                 </div>
               </div>
-              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-yellow-400/30">
+              <div className="text-center p-4 rounded-lg border border-transparent transition-all duration-300 hover:bg-neutral-800/50 hover:border-amber/30">
                 <h3 className="text-sm font-medium text-neutral-400 mb-3 uppercase tracking-wider">Tools</h3>
                 <div className="space-y-2">
                   <div className="text-white font-light">Git</div>
@@ -111,10 +111,10 @@ export default function AboutPage() {
           <div className="text-center">
             <h2 className="text-2xl font-light text-white mb-8 drop-shadow-md">Skills</h2>
             <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
-              {['Full-Stack Development', 'Machine Learning', 'API Design', 'Database Design', 'Cloud Computing', 'DevOps', 'Problem Solving', 'Team Collaboration'].map((skill) => (
+              {['Full-Stack Development', 'Machine Learning', 'API Design', 'Database Design', 'Cloud Computing', 'DevOps', 'Problem Solving', 'Team Collaboration', 'IoT Integration'].map((skill) => (
                 <span 
                   key={skill}
-                  className="px-4 py-2 bg-neutral-800/60 border border-neutral-600 rounded-full text-neutral-200 text-sm font-light hover:border-yellow-400/50 hover:text-yellow-400 transition-colors duration-300"
+                  className="px-4 py-2 bg-neutral-800/60 border border-neutral-600 rounded-full text-neutral-200 text-sm font-light hover:border-amber/50 hover:text-amber transition-colors duration-300"
                 >
                   {skill}
                 </span>

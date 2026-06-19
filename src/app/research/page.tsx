@@ -74,8 +74,8 @@ export default function ResearchPage() {
                     </h2>
                     {item.status === 'wip' ? (
                       <div className="flex flex-col items-center justify-center py-8">
-                        <div className="w-4 h-4 bg-yellow-400 rounded-full animate-pulse mb-2"></div>
-                        <span className="text-yellow-400 text-sm font-medium">Work in Progress</span>
+                        <div className="w-4 h-4 bg-amber rounded-full animate-pulse mb-2"></div>
+                        <span className="text-amber text-sm font-medium">Work in Progress</span>
                       </div>
                     ) : (
                       <div className="flex flex-wrap gap-3 mb-6">
@@ -85,7 +85,7 @@ export default function ResearchPage() {
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 bg-neutral-800 border border-neutral-600 text-neutral-200 text-sm font-medium rounded hover:border-yellow-400 hover:text-yellow-400 transition-colors duration-300"
+                            className="inline-flex items-center px-4 py-2 bg-neutral-800 border border-neutral-600 text-neutral-200 text-sm font-medium rounded hover:border-amber hover:text-amber transition-colors duration-300"
                           >
                             {link.label}
                           </a>
@@ -120,7 +120,7 @@ export default function ResearchPage() {
               disabled={!canGoPrev}
               className={`p-3 rounded-full border transition-all duration-300 ${
                 canGoPrev
-                  ? "border-neutral-600 text-yellow-400 hover:border-yellow-400 hover:bg-yellow-400/10"
+                  ? "border-neutral-600 text-amber hover:border-amber hover:bg-amber/10"
                   : "border-neutral-700 text-neutral-500 cursor-not-allowed"
               }`}
               aria-label="Previous research"
@@ -135,7 +135,7 @@ export default function ResearchPage() {
                   onClick={() => setSelected(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === selected
-                      ? "bg-yellow-400"
+                      ? "bg-amber"
                       : "bg-neutral-600 hover:bg-neutral-400"
                   }`}
                   aria-label={`Go to research ${index + 1}`}
@@ -148,7 +148,7 @@ export default function ResearchPage() {
               disabled={!canGoNext}
               className={`p-3 rounded-full border transition-all duration-300 ${
                 canGoNext
-                  ? "border-neutral-600 text-yellow-400 hover:border-yellow-400 hover:bg-yellow-400/10"
+                  ? "border-neutral-600 text-amber hover:border-amber hover:bg-amber/10"
                   : "border-neutral-700 text-neutral-500 cursor-not-allowed"
               }`}
               aria-label="Next research"
@@ -184,18 +184,18 @@ function TerminalDescription({ description }: { description: string }) {
         setIsTyping(false);
         clearInterval(typeInterval);
       }
-    }, 50); // Adjust speed as needed
+    }, 50); // <- speed adjustment
     
     return () => clearInterval(typeInterval);
   }, [description]);
 
   return (
     <div className="bg-black border border-neutral-600 rounded-lg p-6 font-mono text-sm">
-      <div className="text-yellow-400 mb-4 flex items-center gap-2">
-        <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+      <div className="text-amber mb-4 flex items-center gap-2">
+        <span className="w-2 h-2 bg-amber rounded-full animate-pulse"></span>
         <span>Research Terminal</span>
       </div>
-      <div className="text-yellow-300 leading-relaxed">
+      <div className="text-amber leading-relaxed">
         {displayedText}
         {isTyping && <span className="animate-pulse">|</span>}
       </div>

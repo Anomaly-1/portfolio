@@ -35,10 +35,10 @@ function IconLink({ href, icon, label }: { href: string; icon: React.ReactNode; 
   return (
     <Link href={href}>
       <div className="group flex flex-col items-center gap-3 p-6 hover:scale-105 transition-transform duration-300">
-        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-black border border-neutral-600 rounded-lg text-neutral-300 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors duration-300">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-black border border-neutral-600 rounded-lg text-neutral-300 group-hover:border-amber group-hover:text-amber transition-colors duration-300">
           {icon}
         </div>
-        <span className="text-sm font-light text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300">
+        <span className="text-sm font-light text-neutral-400 group-hover:text-amber transition-colors duration-300">
           {label}
         </span>
       </div>
@@ -51,7 +51,7 @@ function DownloadButton({ onClick, icon, label }: { onClick: () => void; icon: R
   return (
     <button onClick={onClick}>
       <div className="group flex flex-col items-center gap-3 p-6 hover:scale-105 transition-transform duration-300 cursor-pointer">
-        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-black border border-neutral-600 rounded-lg text-neutral-300 group-hover:border-yellow-400 group-hover:text-yellow-400 transition-colors duration-300">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-black border border-neutral-600 rounded-lg text-neutral-300 group-hover:border-amber group-hover:text-amber transition-colors duration-300">
           {icon}
         </div>
         <span className="text-sm font-light text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300">
